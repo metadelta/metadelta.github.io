@@ -15,4 +15,6 @@ git clone https://github.com/aunyks/metadelta.git && cd metadelta && make run-te
 #### Testing
 Although the library is unfinished, you can test what is currently present by running the tests.
 To do so, enter the following line in the terminal:
-`make run-test`
+```
+make run-test
+```
