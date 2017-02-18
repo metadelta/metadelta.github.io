@@ -43,13 +43,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-    var configPath = '';
-    if(window.location.hostname){
-      configPath += 'assets/particles.json';
-    }else{
-      configPath += 'file:///Users/aunyks/Documents/OS/metadelta/site/assets/particles.json';
-    }
-    particlesJS.load('container', configPath, function() {
+    particlesJS.load('container', 'assets/particles.json', function() {
       console.log('callback - particles.js config loaded');
     });
     </script>
