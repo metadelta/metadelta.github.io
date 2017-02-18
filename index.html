@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-      html, body {
+      html, body, #container {
         font-family: 'Roboto', sans-serif;
         width: 100%;
         height: 100%;
@@ -26,18 +26,33 @@
         text-decoration: none;
         color: #222;
         font-size: 30px !important;
-        margin: 10px; 
+        margin: 10px;
       }
     </style>
   </head>
   <body>
-    <div style="width: 300px; margin: 0 auto; margin-top: 200px; text-align: center;">
-      <img src="assets/metadelta-logo-transparent.png" style="float: left;margin-left: 20px; margin-right: -10px;" width="60px" height="60px"/>
-      <span style="font-size: 45px; margin: 0;"><b>metadelta</b></span>
-      <p style="margin-top: 50px;font-size: 20px;">At the intersection of mathematics and computer science.</p>
-      <span><a href="https://github.com/metadelta" class="fa fa-github"></a></span>
-      <span><a href="https://medium.com/metadelta" class="fa fa-medium"></a></span>
-      <span><a href="https://twitter.com/metadeltamath" class="fa fa-twitter"></a></span>
+    <div id="container">
+      <div style="width: 300px; margin: 0 auto; margin-top: 200px; text-align: center;">
+        <img src="assets/metadelta-logo-transparent.png" style="float: left;margin-left: 20px; margin-right: -10px;" width="60px" height="60px"/>
+        <span style="font-size: 45px; margin: 0;"><b>metadelta</b></span>
+        <p style="margin-top: 50px;font-size: 20px;">At the intersection of mathematics and computer science.</p>
+        <span><a href="https://github.com/metadelta" class="fa fa-github"></a></span>
+        <span><a href="https://medium.com/metadelta" class="fa fa-medium"></a></span>
+        <span><a href="https://twitter.com/metadeltamath" class="fa fa-twitter"></a></span>
+      </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+    var configPath = '';
+    if(window.location.hostname){
+      configPath += window.location.hostname+'/assets/particles.json';
+      console.log('Host is:' + window.location.hostname);
+    }else{
+      configPath += 'file:///Users/aunyks/Documents/OS/metadelta/site/assets/particles.json';
+    }
+    particlesJS.load('container', configPath, function() {
+      console.log('callback - particles.js config loaded');
+    });
+    </script>
   </body>
 </html>
